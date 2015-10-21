@@ -9,15 +9,15 @@
 				  <table>
 						<tr>
 							<th class="short">Simpanan Pokok :</th>
-							<td><?php echo $s['spn_pokok']; ?></td>
+							<td>Rp <?php echo number_format($s['spn_pokok'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Simpanan Wajib :</th>
-							<td><?php echo $s['spn_wajib']; ?></td>
+							<td>Rp <?php echo number_format($s['spn_wajib'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Total :</th>
-							<td><?php echo $s['total']; ?></td>
+							<td>Rp <?php echo number_format($s['total'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Tanggal Update :</th>
