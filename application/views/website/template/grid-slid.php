@@ -1,5 +1,5 @@
 <ul id="flexiselDemo3">
-						<li><img src="<?php echo base_url(); ?>asset/website/images/n1.png"  class="img-responsive" /><div class="grid-flex"><h4>Laptob </h4><p>Segera Hadir</p>
+						<li><img src="<?php echo base_url(); ?>asset/website/images/n1.png"  class="img-responsive" /><div class="grid-flex"><h4>Laptop </h4><p>Segera Hadir</p>
 						
 						</div></li>
 						<li><img src="<?php echo base_url(); ?>asset/website/images/n2.png"  class="img-responsive" /><div class="grid-flex"><h4>Handphone </h4><p>Segera Hadir </p>
