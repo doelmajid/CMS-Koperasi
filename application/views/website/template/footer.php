@@ -53,7 +53,7 @@
 		
     	<div class="col-md-3 span_1">
     	  <ul class="spinner1">
-			 <i class="mail"> </i>
+			 <i class="maul"> </i>
 			 <li class="spinner_head"><h3>Hubungi Kami</h3></li>
 			 <div class="clearfix"> </div>
 		  </ul>

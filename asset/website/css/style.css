@@ -1188,6 +1188,14 @@ i.mail{
 	float: left;
 	margin: 0 1em;
 }
+i.maul{
+	width: 30px;
+	height: 30px;
+	background: url(../images/phone.png)no-repeat;
+	background-size : 30px 30px;
+	float: left;
+	margin: 0 1em;
+}
 i.menu{
 	width: 30px;
 	height: 30px;
