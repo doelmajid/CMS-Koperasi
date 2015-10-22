@@ -121,8 +121,8 @@ class Login extends CI_Controller {
                 'status' => 'lama',
                 'message' => "",
                 'simpanan' => $this->m_koperasi->Getsimpanan("where sha1(no_anggota) = '$kode' limit 1")->result_array(),
-                'title' => 'Anggota Koperasi ITS - edit label'
-            );
+
+				);
             $this->template_web->login('login/simpanan', $data);
         } else {
             redirect("website");
