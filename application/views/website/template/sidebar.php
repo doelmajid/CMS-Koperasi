@@ -67,8 +67,8 @@ return true;
     -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);">
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
-				<input type="text" name="kritik" placeholder="kritik" width="100px">
-				<input type="text" name="saran" placeholder="saran">
+				<input type="text" name="kritik" placeholder="Kritik" width="100px">
+				<input type="text" name="saran" placeholder="Saran">
 				<div style="text-align: center">
 				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha" style="margin-top:5px;margin-bottom:5px">
 				</div>
