@@ -12,7 +12,7 @@
 				  <table>
 						<tr>
 							<th class="short">Jumlah pinjaman :</th>
-							<td><?php echo $p['jumlah_pinjaman']; ?></td>
+							<td>Rp <?php echo number_format($p['jumlah_pinjaman'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Masa :</th>
@@ -28,11 +28,11 @@
 						</tr>
 						<tr>
 							<th class="short">Angsuran Pokok :</th>
-							<td><?php echo $p['angsuran_pokok']; ?></td>
+							<td>Rp <?php echo number_format($p['angsuran_pokok'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Sisa Angsuran :</th>
-							<td><?php echo $p['sisa_angsuran']; ?></td>
+							<td>Rp <?php echo number_format($p['sisa_angsuran'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Keterangan :</th>
