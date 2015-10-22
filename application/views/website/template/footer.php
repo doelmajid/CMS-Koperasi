@@ -6,16 +6,23 @@
 			 <li class="spinner_head"><h3>Komentar</h3></li>
 			 <div class="clearfix"> </div>
 		  </ul>
-		  <div class="komentarkomen">
+		  <div class="komentarkomen
+			border-radius: 0px 0px 3px 3px;		
+			padding-top: 10px;		
+			padding-bottom: 10px;		
+			border: 1px solid #c0c0bf;		
+			margin-top: 0px;		
+			webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);		
+			box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);">
 		  <form action= "<?php echo base_url(); ?> index.php/adminwebsite/comment" method="post">
 			<input type="text" name="nama anda" placeholder="nama anda">
 			<input type="text" name="perihal komentar" placeholder="perihal komentar">
 			<input type="text" name="masukkan komentar" placeholder="masukkan komentar">
-			<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
-            <p><input type="text" name="captcha" value="" placeholder="Masukan captcha diatas" required></p>
-            		<div style="text-align: center">
-			<input type="submit" value="submit komentar">
-			</div>
+			<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="280px" alt="captcha" style="margin-top:5px; margin-bottom:5px;">
+             <p><input type="text" name="captcha" value="" placeholder="Masukan captcha diatas" required></p>
+             		<div style="text-align: center">
+-			<input type="submit" value="submit komentar" style="margin-top:5px;margin-bottom:5px">
+ 			</div>
 		  </form> 
                                         
     	</div>
