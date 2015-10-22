@@ -23,7 +23,7 @@
                             <div class="head">                                
                                 <h2>Setting your password</h2>
                                 <ul class="buttons">             
-                                    <li><a href="#" onClick="source('form_default'); return false;"><div class="icon"><span class="ico-info"></span></div></a></li>
+                                    <li><a href="#" onClick="source('form_default'); return false;"><div class="icon"><span class=""></span></div></a></li>
                                 </ul>                                  
                             </div>                                        
                             <div class="data-fluid">
