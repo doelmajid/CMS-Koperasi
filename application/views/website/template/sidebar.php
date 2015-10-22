@@ -85,29 +85,18 @@ return true;
 		  <table class="scroll">
 			<tbody>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Tata cara Registrasi </a></li></td>
+				<td><li><a href="#">Tata cara Registrasi </a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Tata cara Login </a></li></td>
+				<td><li><a href="#">Tata cara Login </a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Informasi terbaru tentang Koperasi  </a></li></td>
+				<td><li><a href="#">Informasi terbaru tentang Koperasi  </a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
+				<td><li><a href="#">Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
 			</tr>
-			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
-			</tr>
-			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
-			</tr>
-			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
-			</tr>
-			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
-			</tr>
+			
 			</tbody>
 		   </table>
 		
