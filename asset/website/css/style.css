@@ -117,7 +117,7 @@ body a{
 }
 #nav ul li {
     margin:0;
-	/*aku rubah ini*/
+	text-align: center;
 	background-color: #39C6ED;
 }
 #nav ul li a {
