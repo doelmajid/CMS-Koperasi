@@ -16,15 +16,15 @@
 						</tr>
 						<tr>
 							<th class="short">Masa Pinjam :</th>
-							<td><?php echo $p['masa']; ?></td>
+							<td><?php echo $p['masa']; ?> hari</td>
 						</tr>
 						<tr>
 							<th class="short">Telah berlalu :</th>
-							<td><?php echo $p['sekarang']; ?></td>
+							<td><?php echo $p['sekarang']; ?> hari</td>
 						</tr>
 						<tr>
 							<th class="short">Sisa Waktu :</th>
-							<td><?php echo $p['sisa']; ?></td>
+							<td><?php echo $p['sisa']; ?> hari</td>
 						</tr>
 						<tr>
 							<th class="short">Angsuran Pokok :</th>
