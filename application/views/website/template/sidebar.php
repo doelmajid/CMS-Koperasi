@@ -103,7 +103,12 @@ return true;
 			<tr>
 				<td><li><a href="#">Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
 			</tr>
-			
+			<tr>
+				<td><li><a href="#">Daftar-daftar anggota koperasi</a></li></td>
+			</tr>
+			<tr>
+				<td><li><a href="#">Testimoni</a></li></td>
+			</tr>
 			</tbody>
 		   </table>
 		
