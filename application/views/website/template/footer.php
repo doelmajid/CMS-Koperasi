@@ -6,7 +6,7 @@
 			 <li class="spinner_head"><h3>Komentar</h3></li>
 			 <div class="clearfix"> </div>
 		  </ul>
-		  <div class="komentarkomen
+		  <div class="komentarkomen" style="background: #fff;
 			border-radius: 0px 0px 3px 3px;		
 			padding-top: 10px;		
 			padding-bottom: 10px;		
