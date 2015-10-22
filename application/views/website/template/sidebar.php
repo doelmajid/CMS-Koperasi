@@ -107,6 +107,12 @@ return true;
 				<td><li><a href="#">Daftar-daftar anggota koperasi</a></li></td>
 			</tr>
 			<tr>
+				<td><li><a href="#">Unit usaha</a></li></td>
+			</tr>
+			<tr>
+				<td><li><a href="#">Unit bidang</a></li></td>
+			</tr>
+			<tr>
 				<td><li><a href="#">Testimoni</a></li></td>
 			</tr>
 			</tbody>
