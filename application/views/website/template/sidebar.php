@@ -58,16 +58,23 @@ return true;
 			<li class="spinner_head"><h3>Kritik dan Saran</h3></li>
 			<div class="clearfix"> </div>
 		  </ul>
-		  <div class="kritik-dan-saran">
+		  <div class="kritik-dan-saran" style="background: #fff;
+    border-radius: 0px 0px 3px 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #c0c0bf;
+    margin-top: 0px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);">
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
-				<input type="text" name="kritik" placeholder="kritik">
+				<input type="text" name="kritik" placeholder="kritik" width="100px">
 				<input type="text" name="saran" placeholder="saran">
 				<div style="text-align: center">
-				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha">
+				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha" style="margin-top:5px;margin-bottom:5px">
 				</div>
 				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
 				<div style="text-align: center">
-				<input type="submit" name="login" value="submit">
+				<input type="submit" name="login" value="submit" style="margin-top:5px">
 				</div>
 			  </form>
 		  </div>
