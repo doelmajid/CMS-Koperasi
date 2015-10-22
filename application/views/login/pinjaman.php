@@ -11,19 +11,19 @@
 				foreach($pimjaman as $p){ ?>
 				  <table>
 						<tr>
-							<th class="short">Jumlah pinjaman :</th>
+							<th class="short">Jumlah Pinjaman :</th>
 							<td>Rp <?php echo number_format($p['jumlah_pinjaman'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Masa :</th>
+							<th class="short">Masa Pinjam :</th>
 							<td><?php echo $p['masa']; ?></td>
 						</tr>
 						<tr>
-							<th class="short">Sekarang :</th>
+							<th class="short">Telah berlalu :</th>
 							<td><?php echo $p['sekarang']; ?></td>
 						</tr>
 						<tr>
-							<th class="short">sisa :</th>
+							<th class="short">Sisa Waktu :</th>
 							<td><?php echo $p['sisa']; ?></td>
 						</tr>
 						<tr>
@@ -42,7 +42,7 @@
 							<th class="short">Tanggal Update :</th>
 							<td><?php echo $p['tgl_update']; ?></td>
 						</tr>
-						</table>
+					</table>
 				<?php } ?>
 				</div>
 				</div>
