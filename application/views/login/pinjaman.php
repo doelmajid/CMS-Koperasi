@@ -11,36 +11,36 @@
 				foreach($pimjaman as $p){ ?>
 				  <table>
 						<tr>
-							<th class="short">Jumlah Pinjaman :</th>
-							<td>Rp <?php echo number_format($p['jumlah_pinjaman'],2,',','.'); ?></td>
+							<th class="short">Jumlah Pinjaman</th>
+							<td><b>: </b>Rp <?php echo number_format($p['jumlah_pinjaman'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Masa Pinjam :</th>
-							<td><?php echo $p['masa']; ?> hari</td>
+							<th class="short">Masa Pinjam</th>
+							<td><b>: </b><?php echo $p['masa']; ?> hari</td>
 						</tr>
 						<tr>
-							<th class="short">Telah berlalu :</th>
-							<td><?php echo $p['sekarang']; ?> hari</td>
+							<th class="short">Telah berlalu</th>
+							<td><b>: </b><?php echo $p['sekarang']; ?> hari</td>
 						</tr>
 						<tr>
-							<th class="short">Sisa Waktu :</th>
-							<td><?php echo $p['sisa']; ?> hari</td>
+							<th class="short">Sisa Waktu</th>
+							<td><b>: </b><?php echo $p['sisa']; ?> hari</td>
 						</tr>
 						<tr>
-							<th class="short">Angsuran Pokok :</th>
-							<td>Rp <?php echo number_format($p['angsuran_pokok'],2,',','.'); ?></td>
+							<th class="short">Angsuran Pokok</th>
+							<td><b>: </b>Rp <?php echo number_format($p['angsuran_pokok'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Sisa Angsuran :</th>
-							<td>Rp <?php echo number_format($p['sisa_angsuran'],2,',','.'); ?></td>
+							<th class="short">Sisa Angsuran</th>
+							<td><b>: </b>Rp <?php echo number_format($p['sisa_angsuran'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Keterangan :</th>
-							<td><?php echo $p['keterangan']; ?></td>
+							<th class="short">Keterangan</th>
+							<td><b>: </b><?php echo $p['keterangan']; ?></td>
 						</tr>
 						<tr>
-							<th class="short">Tanggal Update :</th>
-							<td><?php echo $p['tgl_update']; ?></td>
+							<th class="short">Tanggal Update</th>
+							<td><b>: </b><?php echo $p['tgl_update']; ?></td>
 						</tr>
 					</table>
 				<?php } ?>
