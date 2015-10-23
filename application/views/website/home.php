@@ -32,7 +32,7 @@
   content: "";
   height: 40px;
   width: 80px;
-  background: #ccc; /* Same color that wrapper background */
+  background: #ccc;
   box-shadow: 0 -6px 9px -8px #333;
   transform: rotate(-45deg);
 }
