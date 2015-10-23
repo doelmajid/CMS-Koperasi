@@ -49,7 +49,7 @@
 <td><input name="telepon" placeholder="No. HP / Telepon" type="text" onkeypress="return isNumberKey(event)" required width="100px;"></td>
 </tr>
 <tr><th>Email  :</th>
-<td><input name="email" placeholder="Email" type="email" required width="100px;"></td>
+<td><input name="email" placeholder="Email" type="email" required autocomplete="off" required width="100px;"></td>
 </tr>
 <tr><th>Alamat  :</th>
 <td><input name="alamat" placeholder="Alamat" type="text" required width="100px;"></td>
