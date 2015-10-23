@@ -165,7 +165,7 @@ input.noPrint { display: none; }
     </div> 
     <div style="text-align:center;padding:20px;">
     <input class="noPrint" type="button" value="Cetak Halaman" onclick="window.print()">
-    <? echo "<input type=button value=Batal onclick=self.history.back()>";?>
+    <input type=button value=Batal onclick=self.history.back()>
     </div>
 </div>
 
