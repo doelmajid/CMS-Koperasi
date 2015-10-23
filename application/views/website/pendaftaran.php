@@ -1,7 +1,7 @@
 
 <ul class="spinner3">
 			<i class="paperclip"> </i>
-			<li class="spinner_head"><h3>form Pendaftaran Anggota Baru</h3></li>
+			<li class="spinner_head"><h3>Form Pendaftaran Anggota Baru</h3></li>
 			<div class="clearfix"> </div>
 		  </ul>
 			<div class="berita">
@@ -49,7 +49,7 @@
 <td><input name="telepon" placeholder="No. HP / Telepon" type="text" onkeypress="return isNumberKey(event)" required width="100px;"></td>
 </tr>
 <tr><th>Email  :</th>
-<td><input name="email" placeholder="Email" type="email" required width="100px;"></td>
+<td><input name="email" placeholder="Email" type="email" required autocomplete="off" required width="100px;"></td>
 </tr>
 <tr><th>Alamat  :</th>
 <td><input name="alamat" placeholder="Alamat" type="text" required width="100px;"></td>
@@ -57,7 +57,7 @@
 <!--<tr><th>Tanggal Menjadi Anggota  :</th>
 <td><input name="tgl_bergabung" placeholder="" type="text" width="100px;"></td>
 </tr>-->
-<tr><td colspan="2">  <p><input type="checkbox" id="cek" name="cekdaftar" value="1" />Saya menyatakan untuk di daftar sebagai anggota Koperasi Pegawai Republik Indonesia 
+<tr><td colspan="2">  <p><input type="checkbox" id="cek" name="cekdaftar" value="1" />Saya menyatakan untuk mendaftar sebagai anggota Koperasi Pegawai Republik Indonesia 
 						Institut Teknologi Sepuluh Nopember (KPRI-ITS) dengan sukarela dan bersedia memenuhi/mematuhi 
 						segala hak dan kewajiban sebagai anggota sebagaimana tersebut dalam Anggaran Dasar (AD) dan 
 						Anggoran Rumah Tangga (ART) serta ketentuan KPRI-ITS.</p></td>
