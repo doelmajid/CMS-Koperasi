@@ -54,9 +54,12 @@
 }
 
 body {
-	background: #ccc;
-	margin: 0;
-	padding: 20px;
+	/*font-family: 'Raleway', sans-serif;*/
+  font-family:font-family :Helvetica,Arial,sans-serif;
+  font-size: 100%;
+  background : url("../images/bg.jpg");
+  background-repeat : no-repeat;
+  background-attachment: fixed;
 }
 h1, h3 {
   text-align: center;
