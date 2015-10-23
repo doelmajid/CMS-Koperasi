@@ -33,6 +33,17 @@
 
                    
 				 </div>
+				 <div class="Komentar">
+				 <h2>Komentar</h2>
+				 <form action= "<?php echo base_url(); ?> index.php/controllers/savecomment" method="post">
+					<input type="text" name="name" placeholder="nama anda">
+					<input type="text" name="email" placeholder="masukan email">
+					<input type="text" name="websitesite" placeholder="masukan website">
+					<input type="text" name="isi_content" placeholder="masukan komentar">
+					<input type="submit" value="submit">
+				 </form> 
+                                        
+    	</div>
 				 <div class="clearfix"></div>
 			<?php } ?>
 			
