@@ -2,19 +2,27 @@
     <div class="content_bottom">
     	<div class="col-md-3 span_1">
     	  <ul class="spinner1">
-			 <i class="bubble"> </i>
+			 <i class="bubble1"> </i>
 			 <li class="spinner_head"><h3>Komentar</h3></li>
 			 <div class="clearfix"> </div>
 		  </ul>
-		  <div class="komentarkomen">
+		  <div class="komentarkomen" style="background: #fff;
+			border-radius: 0px 0px 3px 3px;		
+			padding-top: 10px;		
+			padding-bottom: 10px;		
+			border: 1px solid #c0c0bf;		
+			margin-top: 0px;		
+			webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);		
+			box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);">
 		  <form action= "<?php echo base_url(); ?> index.php/adminwebsite/comment" method="post">
-			<input type="text" name="nama anda" placeholder="nama anda">
-			<input type="text" name="perihal komentar" placeholder="perihal komentar">
-			<input type="text" name="masukkan komentar" placeholder="masukkan komentar">
-			<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
-			id="captchaimg" >
-            <p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
-			<input type="submit" value="submit komentar">
+			<input type="text" name="Nama anda" placeholder="Nama anda">
+			<input type="text" name="Perihal komentar" placeholder="Perihal komentar">
+			<input type="text" name="Masukkan komentar" placeholder="Masukkan komentar">
+			<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="280px" alt="captcha" style="margin-top:5px; margin-bottom:5px;">
+             <p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
+             		<div style="text-align: center">
+-			<input type="submit" value="submit komentar" style="margin-top:5px;margin-bottom:5px">
+ 			</div>
 		  </form> 
                                         
     	</div>
@@ -52,7 +60,7 @@
 		
     	<div class="col-md-3 span_1">
     	  <ul class="spinner1">
-			 <i class="mail"> </i>
+			 <i class="maul"> </i>
 			 <li class="spinner_head"><h3>Hubungi Kami</h3></li>
 			 <div class="clearfix"> </div>
 		  </ul>

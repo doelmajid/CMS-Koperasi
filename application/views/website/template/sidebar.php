@@ -4,21 +4,31 @@
 			<div class="clearfix"> </div>
 		  </ul>
 		  <div class="login">
-			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuak">
-				<p><input type="text" name="no_anggota" value="" placeholder="No Anggota"></p>
-				<p><input type="password" name="password" value="" placeholder="Password"></p>
-				<p><img src="../captcha/captcha.php" width="214px" alt="captcha"></p>
-				<p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
+		  <script>
+		  function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : event.keyCode
+if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+alert("Hanya dapat menginputkan nomor");
+return false; 
+	} 
+	else  
+	{ 
+return true; 
+	}
+}
+</script>
+			  <form method="post" action="<?php echo base_url(); ?>index.php/login/masuk">
+				<p id="login"><input type="text" id="nomor" onkeypress="return isNumberKey(event)" name="no_anggota" value="" placeholder="No Anggota" required></p>
+				<p><input type="password" name="password" value="" placeholder="Password" required></p>
+                <p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
+				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
 				
 				
 				<p class="submit">
-				
+				<div style="text-align: center">
 				<input type="submit" name="login" value="Login"></p>
-
-
-				
-
-
+				</div>
 			  </form>
 		  </div>
 		  
@@ -48,15 +58,24 @@
 			<li class="spinner_head"><h3>Kritik dan Saran</h3></li>
 			<div class="clearfix"> </div>
 		  </ul>
-		  <div class="kritik-dan-saran">
+		  <div class="kritik-dan-saran" style="background: #fff;
+    border-radius: 0px 0px 3px 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #c0c0bf;
+    margin-top: 0px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);">
 			  <form method="post" action="<?php echo base_url(); ?>index.php/login/saran_kritik">
-				<input type="text" name="kritik" placeholder="kritik">
-				<input type="text" name="saran" placeholder="saran">
-				<img src="1435119411.85.jpeg?rand=<?php echo rand(); ?>"
-				id = "captchaing">
-				<label for="message">Masukkan kode diatas :</label>
-				<input id="6_letters_code" name="6_letters_code" type="text">
-				<input type="submit" name="login" value="submit">
+				<input type="text" name="kritik" placeholder="Kritik" width="100px">
+				<input type="text" name="saran" placeholder="Saran">
+				<div style="text-align: center">
+				<img src="http://localhost/CMS-Koperasi/index.php/captcha" width="214px" alt="captcha" style="margin-top:5px;margin-bottom:5px">
+				</div>
+				<p><input type="text" name="captcha" value="" placeholder="Masukkan captcha diatas" required></p>
+				<div style="text-align: center">
+				<input type="submit" name="login" value="submit" style="margin-top:5px">
+				</div>
 			  </form>
 		  </div>
 		  
@@ -73,28 +92,28 @@
 		  <table class="scroll">
 			<tbody>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Tata cara Registrasi </a></li></td>
+				<td><li><a href="#">Tata cara Registrasi </a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Tata cara Login </a></li></td>
+				<td><li><a href="#">Tata cara Login </a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Informasi terbaru tentang Koperasi  </a></li></td>
+				<td><li><a href="#">Informasi terbaru tentang Koperasi  </a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
+				<td><li><a href="#">Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
+				<td><li><a href="#">Daftar-daftar anggota koperasi</a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
+				<td><li><a href="#">Unit usaha</a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
+				<td><li><a href="#">Unit bidang</a></li></td>
 			</tr>
 			<tr>
-				<td><li><a href="#">Ini Baru Contoh Syarat Untuk Menjadi Member atau anggota Koperasi</a></li></td>
+				<td><li><a href="#">Testimoni</a></li></td>
 			</tr>
 			</tbody>
 		   </table>

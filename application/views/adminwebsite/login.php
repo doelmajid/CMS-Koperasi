@@ -33,20 +33,21 @@
         <div class="row-fluid">
             <div class="row-form">
                 <div class="span12">
-                    <input type="text" name="username" placeholder="login"/>
+                    <input type="text" name="username" placeholder="login" required/>
                 </div>
             </div>
             <div class="row-form">
                 <div class="span12">
-                    <input type="password" name="password" placeholder="password"/>
+                    <input type="password" name="password" placeholder="password"required/>
                 </div>            
             </div>
 
 
             <div class="row-form">
                 <div class="span12">
-                <p><img src="../captcha/captcha.php" width="214px" alt="captcha"></p>
-                <p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required></p>
+				<div style="text-align: center">
+                <p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
+                <p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required ></p>
                 </div>            
             </div>
 

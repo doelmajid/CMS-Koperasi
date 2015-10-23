@@ -2,11 +2,12 @@
         <li><a class="fly" href="<?php echo base_url();?>">Home</a></li>
         <li><a class="fly" href="#">Profile</a>
             <ul class="dd">
+			
                 <li><a href="#">Visi Dan Misi</a></li>
 				<li><a href="#">Sejarah Singkat</a></li>
 				<li><a href="#">Struktur Organisasi</a></li>
 				<li><a href="#">Agenda Kegiatan</a></li>
-				<li><a href="#">Galery</a></li>
+				<li><a href="#">Galeri</a></li>
             </ul>
         </li>
 		<li><a class="fly" href="<?php echo base_url();?>index.php/daftar">Member Area</a></li>

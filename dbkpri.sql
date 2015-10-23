@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2015 at 02:37 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Generation Time: Oct 22, 2015 at 06:38 AM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `calon_anggota` (
-`id_calon_anggota` int(11) NOT NULL,
+  `id_calon_anggota` int(11) NOT NULL,
   `nama` varchar(200) NOT NULL,
   `nip` varchar(100) NOT NULL,
   `unit` varchar(100) NOT NULL,
@@ -57,7 +57,7 @@ INSERT INTO `calon_anggota` (`id_calon_anggota`, `nama`, `nip`, `unit`, `tempat_
 --
 
 CREATE TABLE IF NOT EXISTS `captcha` (
-`captcha_id` bigint(13) unsigned NOT NULL,
+  `captcha_id` bigint(13) unsigned NOT NULL,
   `captcha_time` bigint(10) unsigned NOT NULL,
   `ip_address` varchar(16) NOT NULL DEFAULT '0',
   `word` varchar(20) NOT NULL
@@ -77,7 +77,7 @@ INSERT INTO `captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUE
 --
 
 CREATE TABLE IF NOT EXISTS `content` (
-`kode_content` int(5) NOT NULL,
+  `kode_content` int(5) NOT NULL,
   `judul_content` varchar(100) DEFAULT NULL,
   `tanggal` datetime DEFAULT NULL,
   `penulis` varchar(50) DEFAULT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `content_label` (
 --
 
 CREATE TABLE IF NOT EXISTS `gambar_slide` (
-`id_updo` int(11) NOT NULL,
+  `id_updo` int(11) NOT NULL,
   `nm_file` varchar(50) NOT NULL,
   `tipe_file` varchar(20) NOT NULL,
   `ket_file` text NOT NULL
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `gambar_slide` (
 --
 
 CREATE TABLE IF NOT EXISTS `komentar` (
-`kode_comment` int(7) NOT NULL,
+  `kode_comment` int(7) NOT NULL,
   `kode_content` int(5) DEFAULT NULL,
   `isi` text,
   `status` varchar(30) DEFAULT NULL,
@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `komentar` (
 --
 
 CREATE TABLE IF NOT EXISTS `kop_anggota` (
-`id_userkoperasi` int(11) NOT NULL,
+  `id_userkoperasi` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `nip` varchar(100) NOT NULL,
   `no_anggota` varchar(100) NOT NULL,
@@ -432,7 +432,7 @@ INSERT INTO `kop_anggota` (`id_userkoperasi`, `nama`, `nip`, `no_anggota`, `pass
 --
 
 CREATE TABLE IF NOT EXISTS `kop_pinjaman` (
-`id_pinjaman` int(11) NOT NULL,
+  `id_pinjaman` int(11) NOT NULL,
   `no_anggota` int(11) NOT NULL,
   `nip` varchar(50) DEFAULT NULL,
   `jumlah_pinjaman` varchar(50) DEFAULT NULL,
@@ -992,7 +992,7 @@ INSERT INTO `kop_pinjaman` (`id_pinjaman`, `no_anggota`, `nip`, `jumlah_pinjaman
 --
 
 CREATE TABLE IF NOT EXISTS `kop_simpanan` (
-`id_simpanan` int(11) NOT NULL,
+  `id_simpanan` int(11) NOT NULL,
   `no_anggota` int(11) NOT NULL,
   `spn_pokok` varchar(50) NOT NULL,
   `spn_wajib` varchar(50) NOT NULL,
@@ -1284,7 +1284,7 @@ INSERT INTO `kop_simpanan` (`id_simpanan`, `no_anggota`, `spn_pokok`, `spn_wajib
 --
 
 CREATE TABLE IF NOT EXISTS `label` (
-`kode_label` int(5) NOT NULL,
+  `kode_label` int(5) NOT NULL,
   `judul_label` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1295,7 +1295,7 @@ CREATE TABLE IF NOT EXISTS `label` (
 --
 
 CREATE TABLE IF NOT EXISTS `setting` (
-`kode_blog` int(4) NOT NULL,
+  `kode_blog` int(4) NOT NULL,
   `judul_blog` text,
   `deskripsi_blog` text,
   `limit_content` int(3) DEFAULT NULL,
@@ -1321,7 +1321,7 @@ INSERT INTO `setting` (`kode_blog`, `judul_blog`, `deskripsi_blog`, `limit_conte
 --
 
 CREATE TABLE IF NOT EXISTS `userapp` (
-`kode_user` int(5) NOT NULL,
+  `kode_user` int(5) NOT NULL,
   `username` varchar(200) DEFAULT NULL,
   `password` varchar(200) DEFAULT NULL,
   `nama_lengkap` varchar(200) DEFAULT NULL,
@@ -1329,16 +1329,14 @@ CREATE TABLE IF NOT EXISTS `userapp` (
   `twitter` varchar(200) DEFAULT NULL,
   `g_plus` varchar(200) DEFAULT NULL,
   `about` text
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `userapp`
 --
 
 INSERT INTO `userapp` (`kode_user`, `username`, `password`, `nama_lengkap`, `facebook`, `twitter`, `g_plus`, `about`) VALUES
-(1, 'admin', 'admin1', 'Rizki Rinaldi', '', '', '', ''),
-(2, 'koperasi', '123456', 'Admin Koperasi', '', '', '', NULL),
-(3, 'admin baru', '1234', 'adminbaru', '', '', '', NULL);
+(1, 'admin', 'admin', 'administrator', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1365,7 +1363,7 @@ INSERT INTO `user_pwd` (`name`, `pass`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `visitor` (
-`no` int(7) NOT NULL,
+  `no` int(7) NOT NULL,
   `ip` varchar(40) DEFAULT NULL,
   `os` varchar(40) DEFAULT NULL,
   `browser` varchar(40) DEFAULT NULL,
@@ -1400,85 +1398,85 @@ INSERT INTO `visitor` (`no`, `ip`, `os`, `browser`, `tanggal`) VALUES
 -- Indexes for table `calon_anggota`
 --
 ALTER TABLE `calon_anggota`
- ADD PRIMARY KEY (`id_calon_anggota`);
+  ADD PRIMARY KEY (`id_calon_anggota`);
 
 --
 -- Indexes for table `captcha`
 --
 ALTER TABLE `captcha`
- ADD PRIMARY KEY (`captcha_id`), ADD KEY `word` (`word`);
+  ADD PRIMARY KEY (`captcha_id`), ADD KEY `word` (`word`);
 
 --
 -- Indexes for table `content`
 --
 ALTER TABLE `content`
- ADD PRIMARY KEY (`kode_content`);
+  ADD PRIMARY KEY (`kode_content`);
 
 --
 -- Indexes for table `content_label`
 --
 ALTER TABLE `content_label`
- ADD PRIMARY KEY (`kode_content`,`kode_label`), ADD KEY `kode_label` (`kode_label`);
+  ADD PRIMARY KEY (`kode_content`,`kode_label`), ADD KEY `kode_label` (`kode_label`);
 
 --
 -- Indexes for table `gambar_slide`
 --
 ALTER TABLE `gambar_slide`
- ADD PRIMARY KEY (`id_updo`);
+  ADD PRIMARY KEY (`id_updo`);
 
 --
 -- Indexes for table `komentar`
 --
 ALTER TABLE `komentar`
- ADD PRIMARY KEY (`kode_comment`), ADD KEY `kode_content` (`kode_content`);
+  ADD PRIMARY KEY (`kode_comment`), ADD KEY `kode_content` (`kode_content`);
 
 --
 -- Indexes for table `kop_anggota`
 --
 ALTER TABLE `kop_anggota`
- ADD PRIMARY KEY (`id_userkoperasi`);
+  ADD PRIMARY KEY (`id_userkoperasi`);
 
 --
 -- Indexes for table `kop_pinjaman`
 --
 ALTER TABLE `kop_pinjaman`
- ADD PRIMARY KEY (`id_pinjaman`), ADD UNIQUE KEY `nip` (`nip`);
+  ADD PRIMARY KEY (`id_pinjaman`), ADD UNIQUE KEY `nip` (`nip`);
 
 --
 -- Indexes for table `kop_simpanan`
 --
 ALTER TABLE `kop_simpanan`
- ADD PRIMARY KEY (`id_simpanan`);
+  ADD PRIMARY KEY (`id_simpanan`);
 
 --
 -- Indexes for table `label`
 --
 ALTER TABLE `label`
- ADD PRIMARY KEY (`kode_label`);
+  ADD PRIMARY KEY (`kode_label`);
 
 --
 -- Indexes for table `setting`
 --
 ALTER TABLE `setting`
- ADD PRIMARY KEY (`kode_blog`);
+  ADD PRIMARY KEY (`kode_blog`);
 
 --
 -- Indexes for table `userapp`
 --
 ALTER TABLE `userapp`
- ADD PRIMARY KEY (`kode_user`);
+  ADD PRIMARY KEY (`kode_user`);
 
 --
 -- Indexes for table `user_pwd`
 --
 ALTER TABLE `user_pwd`
- ADD PRIMARY KEY (`name`);
+  ADD PRIMARY KEY (`name`);
 
 --
 -- Indexes for table `visitor`
 --
 ALTER TABLE `visitor`
- ADD PRIMARY KEY (`no`);
+  ADD PRIMARY KEY (`no`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -1488,62 +1486,62 @@ ALTER TABLE `visitor`
 -- AUTO_INCREMENT for table `calon_anggota`
 --
 ALTER TABLE `calon_anggota`
-MODIFY `id_calon_anggota` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id_calon_anggota` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `captcha`
 --
 ALTER TABLE `captcha`
-MODIFY `captcha_id` bigint(13) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=308;
+  MODIFY `captcha_id` bigint(13) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=308;
 --
 -- AUTO_INCREMENT for table `content`
 --
 ALTER TABLE `content`
-MODIFY `kode_content` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_content` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `gambar_slide`
 --
 ALTER TABLE `gambar_slide`
-MODIFY `id_updo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_updo` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-MODIFY `kode_comment` int(7) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_comment` int(7) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `kop_anggota`
 --
 ALTER TABLE `kop_anggota`
-MODIFY `id_userkoperasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=273;
+  MODIFY `id_userkoperasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=273;
 --
 -- AUTO_INCREMENT for table `kop_pinjaman`
 --
 ALTER TABLE `kop_pinjaman`
-MODIFY `id_pinjaman` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=535;
+  MODIFY `id_pinjaman` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=535;
 --
 -- AUTO_INCREMENT for table `kop_simpanan`
 --
 ALTER TABLE `kop_simpanan`
-MODIFY `id_simpanan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=272;
+  MODIFY `id_simpanan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=272;
 --
 -- AUTO_INCREMENT for table `label`
 --
 ALTER TABLE `label`
-MODIFY `kode_label` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_label` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-MODIFY `kode_blog` int(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `kode_blog` int(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `userapp`
 --
 ALTER TABLE `userapp`
-MODIFY `kode_user` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `kode_user` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `visitor`
 --
 ALTER TABLE `visitor`
-MODIFY `no` int(7) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `no` int(7) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --

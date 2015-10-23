@@ -11,28 +11,28 @@
 				foreach($pimjaman as $p){ ?>
 				  <table>
 						<tr>
-							<th class="short">Jumlah pinjaman :</th>
-							<td><?php echo $p['jumlah_pinjaman']; ?></td>
+							<th class="short">Jumlah Pinjaman :</th>
+							<td>Rp <?php echo number_format($p['jumlah_pinjaman'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Masa :</th>
-							<td><?php echo $p['masa']; ?></td>
+							<th class="short">Masa Pinjam :</th>
+							<td><?php echo $p['masa']; ?> hari</td>
 						</tr>
 						<tr>
-							<th class="short">Sekarang :</th>
-							<td><?php echo $p['sekarang']; ?></td>
+							<th class="short">Telah berlalu :</th>
+							<td><?php echo $p['sekarang']; ?> hari</td>
 						</tr>
 						<tr>
-							<th class="short">sisa :</th>
-							<td><?php echo $p['sisa']; ?></td>
+							<th class="short">Sisa Waktu :</th>
+							<td><?php echo $p['sisa']; ?> hari</td>
 						</tr>
 						<tr>
 							<th class="short">Angsuran Pokok :</th>
-							<td><?php echo $p['angsuran_pokok']; ?></td>
+							<td>Rp <?php echo number_format($p['angsuran_pokok'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Sisa Angsuran :</th>
-							<td><?php echo $p['sisa_angsuran']; ?></td>
+							<td>Rp <?php echo number_format($p['sisa_angsuran'],2,',','.'); ?></td>
 						</tr>
 						<tr>
 							<th class="short">Keterangan :</th>
@@ -42,7 +42,7 @@
 							<th class="short">Tanggal Update :</th>
 							<td><?php echo $p['tgl_update']; ?></td>
 						</tr>
-						</table>
+					</table>
 				<?php } ?>
 				</div>
 				</div>

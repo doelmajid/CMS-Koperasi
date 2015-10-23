@@ -1,5 +1,5 @@
 <ul class="spinner3">
-			<i class="paperclip2"> </i>
+			<i class="paperclip5"> </i>
 			<li class="spinner_head"><h3>Ganti Password</h3></li>
 			<div class="clearfix"> </div>
 		  </ul>
