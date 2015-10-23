@@ -53,6 +53,20 @@ return true;
 		  
 		  <br />
 		 
+		 
+		 <ul class="spinner">
+			<i class="spinner_icon"> </i>
+			<li class="spinner_head"><h3>Lokasi</h3></li>
+			<div class="clearfix"> </div>
+		  </ul>
+		  
+		  <div class="download">
+			<button class="btn-info" style="margin-left: 30%"><b><a href="<?php echo base_url(); ?>index.php/website/peta" target="_blank" style="color:white;">Cek Lokasi</a></b></button>		
+				
+		  </div>
+		  
+		  <br />
+		  
 		   <ul class="spinner">
 		   <i class="spinner_icon"> </i>
 			<li class="spinner_head"><h3>Kritik dan Saran</h3></li>

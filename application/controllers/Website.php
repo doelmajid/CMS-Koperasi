@@ -212,6 +212,10 @@ class Website extends CI_Controller {
         );
         $this->load->view('website/contact', $data);
     }
+	
+	function peta() {
+        $this->load->view('website/peta');
+    }
 
     private function cookiesetter($kode = 0) {
         if (!isset($_COOKIE[$kode])) {
