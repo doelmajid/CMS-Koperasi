@@ -8,24 +8,24 @@
 				<?php foreach($profile as $pr){ ?>
 				  <table>
 						<tr>
-							<th class="short">Nama :</th>
-							<td><?php echo $pr['nama']; ?></td>
+							<th class="short">Nama</th>
+							<td><b>: </b><?php echo $pr['nama']; ?></td>
 						</tr>
 						<tr>
-							<th class="short">NIP :</th>
-							<td><?php echo $pr['nip']; ?></td>
+							<th class="short">NIP</th>
+							<td><b>: </b><?php echo $pr['nip']; ?></td>
 						</tr>
 						<tr>
-							<th class="short">No Anggota :</th>
-							<td><?php echo $pr['no_anggota']; ?></td>
+							<th class="short">No Anggota</th>
+							<td><b>: </b><?php echo $pr['no_anggota']; ?></td>
 						</tr>
 						<tr>
-							<th class="short">Unit :</th>
-							<td><?php echo $pr['unit']; ?></td>
+							<th class="short">Unit</th>
+							<td><b>: </b><?php echo $pr['unit']; ?></td>
 						</tr>
 						<tr>
-							<th class="short">Tanggal terdaftar :</th>
-							<td><?php echo $pr['tgl_bergabung']; ?></td>
+							<th class="short">Tanggal terdaftar</th>
+							<td><b>: </b><?php echo $pr['tgl_bergabung']; ?></td>
 						</tr>
 						</table>
 				<?php } ?>

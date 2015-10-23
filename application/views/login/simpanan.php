@@ -8,20 +8,20 @@
 				<?php foreach($simpanan as $s){ ?>
 				  <table>
 						<tr>
-							<th class="short">Simpanan Pokok :</th>
-							<td>Rp <?php echo number_format($s['spn_pokok'],2,',','.'); ?></td>
+							<th class="short">Simpanan Pokok</th>
+							<td><b>: </b>Rp <?php echo number_format($s['spn_pokok'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Simpanan Wajib :</th>
-							<td>Rp <?php echo number_format($s['spn_wajib'],2,',','.'); ?></td>
+							<th class="short">Simpanan Wajib</th>
+							<td><b>: </b>Rp <?php echo number_format($s['spn_wajib'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Total :</th>
-							<td>Rp <?php echo number_format($s['total'],2,',','.'); ?></td>
+							<th class="short">Total</th>
+							<td><b>: </b>Rp <?php echo number_format($s['total'],2,',','.'); ?></td>
 						</tr>
 						<tr>
-							<th class="short">Tanggal Update :</th>
-							<td><?php echo $s['tgl_update']; ?></td>
+							<th class="short">Tanggal Update</th>
+							<td><b>: </b><?php echo $s['tgl_update']; ?></td>
 						</tr>
 						</table>
 				<?php } ?>
