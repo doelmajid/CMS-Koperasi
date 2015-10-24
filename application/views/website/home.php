@@ -70,8 +70,9 @@ charset=UTF-8">
 <div id="kanvas">
  <div id="header">
   <h1 align="center"></h1>
-  <font size="+3" color="white"><center>SEPUTAR KPRI ITS</center></font><br>
   <h1 align="center"></h1><br>
+  <font size="+3" color="white"><center>SEPUTAR KPRI ITS</center></font><br>
+  
    <font size="+2"><center>Launching KPRI ITS</center></font>
    <h1 align="center"></h1>
   </div>
@@ -81,7 +82,7 @@ charset=UTF-8">
     <div class="deskripsi">
 <center>
 <div class="esquinas">
-	<img src="http://localhost/CMS-koperasi/asset/website/images/kopma.jpg" alt="kopma dr angka ITS" width="500"height="223"><div class="esquinasbis"></div>
+	<img src="http://localhost/CMS-koperasi/asset/website/images/kopma.jpg" alt="kopma dr angka ITS" width="640"height="155"><div class="esquinasbis"></div>
 </div>
 <p>KPRI ITS atau yang kepanjangannya adalah Koperasi Pegawai Republik Indonesia - Institut Teknologi Sepuluh Nopember Surabaya berlokasi di samping Gelanggang Olahraga (GOR) Bulutangkis ITS.</p>
 <br><br><br><br><br><br><br><br><br><br>
