@@ -1,6 +1,6 @@
 <ul class="spinner1">
 			<i class="paperclip"> </i>
-			<li class="spinner_head"><h3>Selamat Datang </h3></li>
+			<li class="spinner_head"><h3>Koperasi Pegawai Republik Indonesia ITS, Surabaya</h3></li>
 			<div class="clearfix"> </div>
 		  </ul>
 			 

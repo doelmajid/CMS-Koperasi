@@ -2,11 +2,12 @@
                     <div class="icon">
                         <span class="ico-arrow-right"></span>
                     </div>
-                    <h1>Dashboard <small>METRO STYLE ADMIN PANEL</small></h1>
+                    <h1>Dashboard <small>Halaman Administrasi</small></h1>
                 </div>
                 
-                <div class="row-fluid">                    
-                    <div class="span7">                        
+                <div class="row-fluid">   
+                    
+                    <!-- <div class="span7">                        
                         <div class="block">    
                             <div class="row-fluid">
                                 <div class="span4">
@@ -91,6 +92,6 @@
                             </div>
                         </div>
                         
-                    </div>
+                    </div> -->
                     
                 </div>

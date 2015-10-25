@@ -77,10 +77,7 @@
 				alert("Anda harus menyetujui dan Centang untuk melanjutkan");
 				return false;
 			}
-			else {
-				alert("Selamat! Anda telah berhasil terdaftar sebagai anggota KPRI-ITS");
-				return true;
-			}
+			
 			}
 
 	    $('#tgl_lahir').datetimepicker({

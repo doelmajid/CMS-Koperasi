@@ -78,13 +78,13 @@
 	</div>
    <?php echo $_footer; ?>
 </div>
-<div class="container">
+<!-- <div class="container">
 <div class="footer">
 		<?php  
 		$thn = date('Y');
 		?>
 		<p class="copy">Copyright &copy; <?php echo $thn;?> by KPRI Institut Teknologi Sepuluh Nopember</p>
 	</div>
-</div>
+</div> -->
 </body>
 </html>		

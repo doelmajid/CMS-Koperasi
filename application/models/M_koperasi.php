@@ -73,16 +73,21 @@ class M_koperasi extends CI_Model {
         return $this->db->query("select * from kop_anggota $where;");
     }
 
+    function GetAdmin($where = '') {    // checked by hatma 25 okt 2015
+        return $this->db->query("select * from userapp $where;");
+    }
+
     function GetCalon($where = '') {
         return $this->db->query("select * from calon_anggota $where;");
     }
 
     function GetContentBlog($where = "") {
-        return $this->db->query("select content.*,count(komentar.kode_comment)as totalkomentar from content left join (select * from komentar where status = 'publish' group by kode_content)as komentar on content.kode_content=komentar.kode_content inner join content_label on content.kode_content=content_label.kode_content $where;");
+        return $this->db->query("select content.* from content $where;");
+        //return $this->db->query("select content.*,count(komentar.kode_comment)as totalkomentar from content left join (select * from komentar where status = 'publish' group by kode_content)as komentar on content.kode_content=komentar.kode_content inner join content_label on content.kode_content=content_label.kode_content $where;");
     }
 
     function GetContentPublished($where = "") {
-        return $this->db->query("select count(*)as total from (select content.*,count(komentar.kode_comment)as totalkomentar from content left join komentar on content.kode_content=komentar.kode_content inner join content_label on content.kode_content=content_label.kode_content $where group by content.kode_content order by content.kode_content desc) as temp");
+        return $this->db->query("select count(*)as total from content $where order by content.kode_content desc");
     }
 
     function GetContentDetail($where = "") {
@@ -104,6 +109,11 @@ class M_koperasi extends CI_Model {
     public function UbahPassAnggota($no_anggota, $password_baru) { //check by hatma @ 17 okt
         $this->db->where(array('sha1(no_anggota)' => $no_anggota));
         return $this->db->update('kop_anggota', array('password' => md5($password_baru)));
+    }
+
+    public function UbahPassAdmin($username, $password_baru) { //check by hatma @ 17 okt
+        $this->db->where(array('username' => $username));
+        return $this->db->update('userapp', array('password' => md5($password_baru)));
     }
 
     public function DeleteData($table, $where) {

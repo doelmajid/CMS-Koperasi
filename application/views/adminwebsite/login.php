@@ -46,7 +46,7 @@
             <div class="row-form">
                 <div class="span12">
 				<div style="text-align: center">
-                <p><img src="<?php echo base_url(); ?>index.php/captcha" width="214px" alt="captcha"></p>
+                <p><img src="<?php echo base_url(); ?>index.php/captcha" width="70px" alt="captcha"></p>
                 <p><input type="text" name="captcha" value="" placeholder="Masukan kode diatas" required ></p>
                 </div>            
             </div>

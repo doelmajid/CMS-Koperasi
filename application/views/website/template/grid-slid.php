@@ -1,3 +1,4 @@
+<!-- // TODO checked by Hatma 24 okt -->
 <ul id="flexiselDemo3">
 						<li><img src="<?php echo base_url(); ?>asset/website/images/n1.png"  class="img-responsive" /><div class="grid-flex"><h4>Laptop </h4><p>Segera Hadir</p>
 						

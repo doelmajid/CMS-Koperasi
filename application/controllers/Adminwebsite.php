@@ -99,7 +99,7 @@ class Adminwebsite extends CI_Controller {
         }
     }
 
-    function newcontent() {
+    function newcontent() { // checked by Hatma 17 okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data = array(
@@ -121,7 +121,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/editor_berita', $data);
     }
 
-    function editcontent($kode = 0) {
+    function editcontent($kode = 0) {// checked by hatma 25 okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $data_content = $this->m_koperasi->GetContent("where kode_content = '$kode'")->result_array();
@@ -150,7 +150,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/editor_berita', $data);
     }
 
-    function session_preview() {
+    function session_preview() {// checked by Hatma 17 okt
         $this->cek_session();
         if ($_POST) {
             $data_sess = $this->session->userdata('login');
@@ -217,7 +217,7 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/preview', $data);
     }
 
-    function savecontent() {
+    function savecontent() {    // checked by Hatma @ 18 okt
         $this->cek_session();
         $data_sess = $this->session->userdata('login');
         $this->load->library('upload');
@@ -230,11 +230,11 @@ class Adminwebsite extends CI_Controller {
         $config['file_name'] = $nmfile; //nama yang terupload nantinya
         $this->load->library('upload', $config);
         $file = $this->upload->initialize($config);
-        chmod($file, 0777);
+        //chmod($file, 0777);
         if ($_FILES['filefoto']['name']) {
             if ($this->upload->do_upload('filefoto')) {
                 $gbr = $this->upload->data();
-                chmod($gbr, 0777);
+                //chmod($gbr, 0777);
                 $status_simpan = array('status_simpan' => $this->input->post('status_simpan'),
                     'labels' => $this->input->post('labels'));
                 $data = array(
@@ -246,27 +246,29 @@ class Adminwebsite extends CI_Controller {
                     'penulis' => $data_sess['pengguna'],
                     'content' => $this->input->post('isi'),
                     'tags' => $this->input->post('tags'),
-                    'status' => $this->input->post('status'),
-                    'tampilan_status' => $this->input->post('tampilan_status'),
+                    //'status' => $this->input->post('status'),
+                    //'tampilan_status' => $this->input->post('tampilan_status'),
+                    'status' => "publish",
+                    'tampilan_status' => "utama",
                     'counter' => 0
                 );
                 if ($status_simpan['status_simpan'] == "baru") {
                     $result = $this->m_koperasi->InsertData('content', $data);
                     if ($result == 1) {
                         $terakhir = $this->m_koperasi->GetContent('order by kode_content desc limit 1')->result_array();
-                        foreach ($status_simpan['labels'] as $l) {
+                        /*foreach ($status_simpan['labels'] as $l) {
                             $data = array(
                                 'kode_content' => $terakhir[0]['kode_content'],
                                 'kode_label' => $l
                             );
                             $this->m_koperasi->InsertData('content_label', $data);
-                        }
+                        }*/
                         header('location:' . base_url() . 'index.php/adminwebsite/content/2');
                     } else {
                         header('location:' . base_url() . 'index.php/adminwebsite/content/0');
                     }
                 } else {
-                    $this->m_koperasi->DeleteData('content_label', array('kode_content' => $kode_content));
+                    //$this->m_koperasi->DeleteData('content_label', array('kode_content' => $kode_content));
                     $data = array(
                         'judul_content' => $this->input->post('judul_post'),
                         'image_header' => $gbr['file_name'],
@@ -276,30 +278,38 @@ class Adminwebsite extends CI_Controller {
                         'penulis' => $data_sess['pengguna'],
                         'content' => $this->input->post('isi'),
                         'tags' => $this->input->post('tags'),
-                        'status' => $this->input->post('status'),
-                        'tampilan_status' => $this->input->post('tampilan_status')
+                        //'status' => $this->input->post('status'),
+                        //'tampilan_status' => $this->input->post('tampilan_status'),
+                        'status' => "publish",
+                        'tampilan_status' => "utama"
                     );
+                    $kode_content = $this->input->post('kode_content') ;
                     $result = $this->m_koperasi->UpdateData('content', $data, array('kode_content' => $kode_content));
                     if ($result == 1) {
-                        foreach ($labels as $l) {
+                        /*foreach ($labels as $l) {
                             $data = array(
                                 'kode_content' => $kode_content,
                                 'kode_label' => $l
                             );
                             $this->m_koperasi->InsertData('content_label', $data);
-                        }
+                        }*/
                         header('location:' . base_url() . 'index.php/adminwebsite/content/3');
                     } else {
                         header('location:' . base_url() . 'index.php/adminwebsite/content/0');
                     }
                 }
+            } else {
+                echo "<SCRIPT LANGUAGE='JavaScript'>
+                    window.alert('Upload Gambar Gagal!')
+                    window.location.href='" . base_url() . "index.php/admin';
+                    </SCRIPT>";
             }
         } else {
             $this->load->view('adminwebsite/pagenotfound', array('title' => 'page not found'));
         }
     }
 
-    function deletecontent($kode = 0) {
+    function deletecontent($kode = 0) { // checked by hatma 25 okt
         $this->cek_session();
         $this->m_koperasi->DeleteData('content_label', array('kode_content' => $kode));
         $result = $this->m_koperasi->DeleteData('content', array('kode_content' => $kode));
@@ -310,7 +320,7 @@ class Adminwebsite extends CI_Controller {
         }
     }
 
-    function content($mess = -1) {
+    function content($mess = -1) {  // checked by hatma 25 okt
         $this->cek_session();
         $data = array(
             'session' => $this->session->userdata('login'),
@@ -737,8 +747,45 @@ class Adminwebsite extends CI_Controller {
         $this->template->display('adminwebsite/setting_password', $data);
     }
 
-    function savepassword() {
+    function savepassword() {   // checked by hatma 25 okt 2015
         $this->cek_session();
+            if ($_POST) {
+
+                if ($_POST['password_lama'] == "" | $_POST['password_baru'] == "" | $_POST['username'] == "" ) {
+                    echo "<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('Semua kolom wajib diisi! ')
+						window.location.href='" . base_url() . "index.php/adminwebsite/settingpassword';
+						</SCRIPT>";
+                } else {
+
+                    $password_lama = $_POST['password_lama'] ; //. $this->config->item("key_login");
+                    $password_baru = $_POST['password_baru'] ; //. $this->config->item("key_login");
+                    $id = $_POST['username'];
+                    $temp = $this->m_koperasi->GetAdmin("where username = '$id' and password = md5('$password_lama')")->result_array();
+                    if ($temp != NULL) {
+                        $result = $this->m_koperasi->UbahPassAdmin($id, $password_baru);
+                        if ($result == 1) {
+                            echo "<SCRIPT LANGUAGE='JavaScript'>
+                                                    window.alert('Password Berhasil Di Update !!')
+                                                    window.location.href='" . base_url() . "index.php/admin';
+                                                    </SCRIPT>";
+                        } else
+                            echo "<SCRIPT LANGUAGE='JavaScript'>
+                                                    window.alert('Password gagal Di Update !!')
+                                                    window.location.href='" . base_url() . "index.php/admin';
+                                                    </SCRIPT>";
+                    } else {
+                        echo "<SCRIPT LANGUAGE='JavaScript'>
+                                            window.alert('Password Tidak Di Update !! Password lama salah')
+                                            window.location.href='" . base_url() . "index.php/adminwebsite/settingpassword';
+                                            </SCRIPT>";
+                    }
+                }
+            } else {
+                redirect("adminwebsite");
+            }
+        
+        /*
         if ($_POST) {
             $data_sess = $this->session->userdata('login');
             $username = $_POST['username'];
@@ -765,6 +812,7 @@ class Adminwebsite extends CI_Controller {
         } else {
             $this->load->view('adminwebsite/pagenotfound', array('title' => 'page not found'));
         }
+        */
     }
 
     function destroyingsession() {  //checked by hatma @ 18 okt

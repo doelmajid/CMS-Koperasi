@@ -10,7 +10,7 @@ class Website extends CI_Controller {
       file : websitesite.php untuk websitesite Koperasi
      */
 
-    function __construct() {
+    function __construct() {    // checked by Hatma 24 okt
         parent::__construct();
         if (!isset($_SESSION)) {
             session_start();
@@ -20,7 +20,7 @@ class Website extends CI_Controller {
         $this->load->helper(array('form', 'url'));
     }
 
-    function index($offset = 0) {
+    function index($offset = 0) {   // checked by Hatma 24 okt
         $this->countervisitor();
         $data_setting = $this->m_koperasi->GetSetting()->result_array();
         $total_data = $this->m_koperasi->GetContentPublished("where content.status = 'publish'")->result_array();
@@ -45,7 +45,7 @@ class Website extends CI_Controller {
             'links' => $this->pagination->create_links(),
             'recent_post' => $this->m_koperasi->GetContent("where status = 'publish' order by rand() limit 5")->result_array(),
             'label' => $this->m_koperasi->GetLabel()->result_array(),
-            'content' => $this->m_koperasi->GetContentBlog("where content.status = 'publish' group by content.kode_content order by content.kode_content desc limit $offset," . $data_setting[0]['limit_content'])->result_array(),
+            'content' => $this->m_koperasi->GetContentBlog("where content.status = 'publish' order by content.kode_content desc limit $offset," . $data_setting[0]['limit_content'])->result_array(),
             'slide' => $this->m_koperasi->GetContentBlog("where content.tampilan_status = 'Utama' group by content.kode_content order by content.kode_content desc limit $offset," . $data_setting[0]['limit_content'])->result_array(),
             'deskripsi' => $data_setting[0]['deskripsi_blog'],
             'author' => 'Rizki Rinaldi (KPN-ITS)',
@@ -92,7 +92,7 @@ class Website extends CI_Controller {
         $this->load->view('website/index', $data);
     }
 
-    function detail($judul = '', $kode = 0) {
+    function detail($judul = '', $kode = 0) {   //CHECKED by hatma 25 okt
         $this->countervisitor();
         $data_setting = $this->m_koperasi->GetSetting()->result_array();
         //$data_content =  $this->m_koperasi->GetContentDetail("where content.kode_content = '$kode'")->result_array();		
@@ -217,7 +217,7 @@ class Website extends CI_Controller {
         $this->load->view('website/peta');
     }
 
-    private function cookiesetter($kode = 0) {
+    private function cookiesetter($kode = 0) {  //checked by hatma 25 okt
         if (!isset($_COOKIE[$kode])) {
             $content = $this->m_koperasi->GetContent("where kode_content = '$kode'")->result_array();
             $result = $this->m_koperasi->UpdateData('content', array('counter' => ($content[0]['counter'] + 1)), array('kode_content' => $kode));
@@ -227,7 +227,7 @@ class Website extends CI_Controller {
         }
     }
 
-    private function countervisitor() {
+    private function countervisitor() { // checked by Hatma 24 okt
         if ($this->agent->is_browser()) {
             $agent = $this->agent->browser() . ' ' . $this->agent->version();
         } elseif ($this->agent->is_robot()) {

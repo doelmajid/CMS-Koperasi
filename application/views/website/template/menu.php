@@ -1,3 +1,4 @@
+<!-- // TODO Checked by hatma 24 okt -->
 <ul id="nav">
         <li><a class="fly" href="<?php echo base_url();?>">Home</a></li>
         <li><a class="fly" href="#">Profile</a>
@@ -10,7 +11,7 @@
 				<li><a href="#">Galeri</a></li>
             </ul>
         </li>
-		<li><a class="fly" href="<?php echo base_url();?>index.php/daftar">Member Area</a></li>
+		<li><a class="fly" href="<?php echo base_url();?>index.php/daftar">Pendaftaran</a></li>
         <li><a class="fly" href="#">Gerai Layanan</a>
             <ul class="dd">
                 <li><a href="#">Layanan Anggota</a></li>

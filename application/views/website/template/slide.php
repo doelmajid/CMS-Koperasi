@@ -1,4 +1,4 @@
-		
+<!-- // checked by Hatma 24 okt -->		
 		<ul class="rslides" id="slider">
 			<?php foreach(@$slide as $s){ ?>
 	        <li><img src="<?php echo base_url(); ?>asset/files/header_content/<?php echo $s['image_header']; ?>" class="img-responsive" alt=""/>
